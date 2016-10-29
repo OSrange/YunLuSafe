@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:text="初始设置"
+        style="@style/titleStyle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="通过绑定SIM卡:\n下次重启手机若发现SIM卡发生变化则发送短信报警"/>
+    <cn.edu.csu.bbs.yunlusafe.view.SettingItemView
+        android:id="@+id/siv_sim"
+        app:destitle="点击绑定SIM卡"
+        app:desoff="SIM卡未绑定"
+        app:deson="SIM卡已绑定"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </cn.edu.csu.bbs.yunlusafe.view.SettingItemView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="通过绑定安全号码:\n手机若丢失则可通过带有此号码的手机尝试找回"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_safe_number"
+            android:hint="输入安全号码"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_select"
+            android:text="选择联系人"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_setup_over"
+            android:text="完成设置＞＞"
+            android:textColor="@color/blue"
+            android:layout_centerInParent="true"
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

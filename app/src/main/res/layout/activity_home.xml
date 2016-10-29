@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:text="功能列表"
+        style="@style/titleStyle"/>
+
+
+    <cn.edu.csu.bbs.yunlusafe.view.FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ad"
+        android:singleLine="true"
+        android:padding="5dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever" />
+
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="10dp">
+    </GridView>
+
+</LinearLayout>
